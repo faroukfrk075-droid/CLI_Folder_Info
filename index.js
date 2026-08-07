@@ -7,14 +7,6 @@ import fs from 'fs';
 const inputpath = process.argv[2];
 const folderpath = inputpath ? path.resolve(inputpath) : process.cwd();
 
-fs.readdir("test" , function (err , files) {
-  if (err){
-    console.error(err);
-  }
-  else {
-    console.log("directory containes :", files );
-  }
-})
 
 fs.readdir(folderpath , {withFileTypes : true }, function(err , entries ) {
 
